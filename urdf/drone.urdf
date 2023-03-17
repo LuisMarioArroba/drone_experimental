@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="drone">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0103418906548951 0.00170712651985278 0.0389749903153565"
+        rpy="0 0 0" />
+      <mass
+        value="0.465801934319542" />
+      <inertia
+        ixx="0.00126230082475791"
+        ixy="-6.4690287986084E-06"
+        ixz="0.000253790065522549"
+        iyy="0.0011921077696541"
+        iyz="-2.02416249882526E-06"
+        izz="0.00219718514213613" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Motor_1_link">
+    <inertial>
+      <origin
+        xyz="1.0619E-07 -9.4884E-09 -0.00086879"
+        rpy="0 0 0" />
+      <mass
+        value="0.070494" />
+      <inertia
+        ixx="0.00019938"
+        ixy="0.00011033"
+        ixz="4.763E-11"
+        iyy="6.408E-05"
+        iyz="-6.7365E-11"
+        izz="0.0002628" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Motor_1_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.043137 0.043137 0.043137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Motor_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Motor_1_joint"
+    type="continuous">
+    <origin
+      xyz="0.0033989 0.22459 0.086331"
+      rpy="-2.9937 -0.20012 2.4984" />
+    <parent
+      link="base_link" />
+    <child
+      link="Motor_1_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="Motor_2_link">
+    <inertial>
+      <origin
+        xyz="5.3331E-08 1.8562E-07 0.00086877"
+        rpy="0 0 0" />
+      <mass
+        value="0.070494" />
+      <inertia
+        ixx="0.00023041"
+        ixy="8.375E-05"
+        ixz="-6.3371E-12"
+        iyy="3.3059E-05"
+        iyz="-5.5956E-11"
+        izz="0.0002628" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Motor_2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.043137 0.043137 0.043137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Motor_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Motor_2_joint"
+    type="continuous">
+    <origin
+      xyz="0.23836 0.019158 0.02677"
+      rpy="-0.14791 0.20012 -0.64321" />
+    <parent
+      link="base_link" />
+    <child
+      link="Motor_2_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="Motor_3_link">
+    <inertial>
+      <origin
+        xyz="2.1108E-08 -5.1585E-07 0.00086876"
+        rpy="0 0 0" />
+      <mass
+        value="0.070493" />
+      <inertia
+        ixx="0.00023041"
+        ixy="8.375E-05"
+        ixz="-3.1749E-11"
+        iyy="3.3059E-05"
+        iyz="1.492E-10"
+        izz="0.0002628" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Motor_3_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.043137 0.043137 0.043137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Motor_3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Motor_3_joint"
+    type="continuous">
+    <origin
+      xyz="-0.19575 -0.017825 0.13681"
+      rpy="0.14791 -0.20012 2.4984" />
+    <parent
+      link="base_link" />
+    <child
+      link="Motor_3_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+  <link
+    name="Motor_4_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Motor_4_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone/meshes/Motor_4_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Motor_4_joint"
+    type="continuous">
+    <origin
+      xyz="0.039219 -0.22325 0.077251"
+      rpy="-2.8954 -0.032591 1.6998" />
+    <parent
+      link="base_link" />
+    <child
+      link="Motor_4_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="100"
+      velocity="100" />
+    <dynamics
+      damping="0.1"
+      friction="0.1" />
+  </joint>
+</robot>
